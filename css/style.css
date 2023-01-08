@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+:root {
+  --gray: #3b3b3b;
+  --sky-blue: #228bcc;
+}
+.bouncing-ball-container {
+  border-bottom: 15px solid var(--gray);
+  display: flex;
+  border-radius: 10px;
+}
+.bouncing-ball-container .ball {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--sky-blue);
+  margin: auto 20px;
+  list-style: none;
+  animation: bouncing 1s linear infinite alternate-reverse;
+}
+@keyframes bouncing {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-150px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.bouncing-ball-container .ball:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.bouncing-ball-container .ball:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.bouncing-ball-container .ball:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.bouncing-ball-container .ball:nth-child(5) {
+  animation-delay: 0.8s;
+}
